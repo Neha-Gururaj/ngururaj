@@ -1,0 +1,42 @@
+[
+        {
+            "date": "22/09/2019", 
+            "category": "A",
+            "description": "Weekly Report Portal",
+            "rfc": "3-ABCDEFG",
+            "dueDate": "30/09/2019",
+            "time": "8d",
+            "status": "Completed",
+            "notes": ""
+        },
+        {
+            "date": "24/09/2019",
+            "category": "B",
+            "description": "Atom integration",
+            "rfc": "3-123ABCD",
+            "dueDate": "05/10/2019",
+            "time": "8d",
+            "status": "On Hold/Skipped",
+            "notes": ""
+        },
+        {
+            "date": "26/09/2019",
+            "category": "A",
+            "description": "Weekly Report Portal",
+            "rfc": "3-ABCD123",
+            "dueDate": "08/10/2019",
+            "time": "8d",
+            "status": "In Progress",
+            "notes": ""
+        },
+        {
+            "date": "28/09/2019",
+            "category": "B",
+            "description": "Atom integration",
+            "rfc": "3-123ABCD",
+            "dueDate": "05/10/2019",
+            "time": "8d",
+            "status": "Assigned",
+            "notes": ""
+        }
+    ]

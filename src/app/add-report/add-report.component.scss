@@ -1,0 +1,11 @@
+.add_report {
+    margin-top: 20px;
+    .date, #category, .description, .rfc, .dueDate, .time, #status, .notes {
+        border: 1px solid #1872F8;
+        // border-radius: 15px;
+    }
+    .warn {
+        color: red;
+    }
+    
+}

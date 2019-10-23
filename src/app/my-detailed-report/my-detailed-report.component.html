@@ -1,0 +1,13 @@
+<div class="card report-card">
+    <div [ngClass]="{'report-card-header-completed': status === 'Completed', 'report-card-header-inprogress': status === 'In Progress', 'report-card-header-onhold': status === 'On Hold/Skipped'}" class="card-header">
+        
+            <h5 class="header-contents">STATUS  :  {{status | uppercase}}</h5>
+            <h5 class="header-contents">JIRA/SR/RFC  :  {{rfc | uppercase}}</h5>
+            <h5 class="header-contents">TIME SPENT  :  {{time}}</h5>
+        
+    </div>
+    <div class="card-body">
+        <h5>Description:</h5>
+        <p>{{description}}</p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+.report-card {
+    margin: 50px;
+    .header-contents {
+        text-align: center;
+        display: inline-block;
+        padding-right: 100px;
+    }
+    .header-contents:first-child {
+        padding-left: 100px;
+    }
+    .report-card-header-completed {
+        background-color: #b4e6c0;
+    }
+    .report-card-header-inprogress {
+        background-color: #aed4ee;
+    }
+    .report-card-header-onhold {
+        background-color: #ec9898;
+    }
+}

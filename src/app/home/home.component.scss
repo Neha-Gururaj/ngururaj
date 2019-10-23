@@ -1,0 +1,113 @@
+// #list {
+    
+//     ul {
+//         // display: flex;
+//         // justify-content: space-between;
+//         margin-top: 50px;
+//         margin-left: 30px;
+//         position: relative;
+//         left: 130px;
+//         .list-items {
+//             list-style: none;
+//             display: inline-block;
+//         }
+//         .actions {
+//             width: 250px;
+//             height: 90px;
+//             background: transparent;
+//             border: 1px solid #1872F8;
+//             border-radius: 8px;
+//             font-family: Montserrat;
+//             font-size: 18px;
+//             // text-align: 
+//             margin-right: 50px;
+//             .action_icon1 {
+//                 color: #1872F8;
+//                 font-size: 36px;
+//                 display: inline;
+//                 position: relative;
+//                 top: 5px;
+//                 right: 35px;
+//             }
+//             .action_icon2 {
+//                 color: #1872F8;
+//                 font-size: 36px;
+//                 display: inline;
+//                 position: relative;
+//                 top: 5px;
+//                 right: 15px;
+//             }
+//             .action_icon3 {
+//                 color: #1872F8;
+//                 font-size: 36px;
+//                 display: inline;
+//                 position: relative;
+//                 top: 5px;
+//                 right: 5px;
+//             }
+//             p {
+//                 display: inline-block;
+//                 position: relative;
+//                 right: 25px;
+//                 top: -5px;           
+//             }
+//             #content2 {
+//                 position: relative;
+//                 right: 5px;
+//             }
+//             #content3 {
+//                 position: relative;
+//                 right: -5px;
+//             }
+//         }
+//     }
+// }
+
+
+
+.card-container {
+    position: relative;
+    top: 100px;
+    .column1 {
+        position: relative;
+        left: 220px;
+        .card1 {
+            background-color: #c5cae9;
+            width: 300px;
+            cursor: pointer;
+        }
+        .card2 {
+            background-color: #e8eaf6;
+            width: 300px;
+            cursor: pointer;
+        }
+    }
+    .card3 {
+        background-color:#73cffa;
+        width: 300px;
+        cursor: pointer;
+    }
+    .card4 {
+        background-color:#b3e5fc;
+        width: 300px;
+        cursor: pointer;
+    }
+    .card5 {
+        background-color:#e1f5fe;
+        width: 300px;
+        cursor: pointer;
+    }
+    
+}
+.for-icon {
+    height: 50px;
+    .my-card-icon {
+        font-size: 40px;
+    }
+    
+}
+.for-text {
+    .text {
+        font-size: 24px;
+    }
+}

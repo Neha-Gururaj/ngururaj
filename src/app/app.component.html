@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <mat-drawer-container class="mycontainer">
+    <mat-drawer #drawer class="sidenav" mode="over">
+      <mat-icon id="lens_icon">lens</mat-icon>
+      <h6 class="person">{{name}}</h6>
+      <h6 class="person">{{email}}</h6>
+    </mat-drawer>
+    <mat-toolbar>
+      <mat-icon id="menu" (click)="drawer.toggle()">menu</mat-icon>
+      Weekly Report for OMCS DevOps
+      <div id="namecard">
+        {{name | slice:0:1 | uppercase}}
+      </div>
+      <mat-icon id="notification">notifications</mat-icon>
+      <input type="text" placeholder="Search" name="search" id="searchbar">
+      <mat-icon id="home" routerLink="/">home</mat-icon>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-drawer-container>
+</div>
+

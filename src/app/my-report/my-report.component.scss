@@ -1,0 +1,251 @@
+.day {
+    height: 50px;
+    width: 50px;
+    background-color: indigo;
+    border-radius: 50%;
+    position: relative;
+    left: 50px;
+    top: 30px;
+    display: inline-block;
+    margin: 50px;
+    font-family: Montserrat;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    .eachday {
+        color: white;
+        font-family: Montserrat;
+        text-align: center;
+        font-size: 22px;
+        display: inline; 
+        position: relative;
+        top: 8px;
+    }
+}
+.day:first-child {
+    margin-left: 90px;
+}
+.day:not(:last-child):after {
+    content: " ";
+    position: absolute;
+    width: 150px;
+    z-index: -1;
+    border: 0.5px solid #c6bece;
+    top: 25px;
+    left: 20px;
+}
+
+.item-completed {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #95b89d;
+    position: relative;
+    left: 153px;
+    top: 40px;
+    display: inline-block;
+}
+.week-days:not(:last-child):after {
+    height: 65px;
+    width: 0.5px;
+    border: 0.5px solid #c6bece;
+    top: 50px;
+    left: 25px;
+}
+
+    
+.updated-tickets-monday {
+    position: relative;
+    top: 20px;
+    right: -115px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+.updated-tickets-tuesday {
+    position: relative;
+    top: 20px;
+    right: -265px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+.updated-tickets-wednesday {
+    position: relative;
+    top: 20px;
+    right: -415px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+.updated-tickets-completed {
+    border: 2px solid #95b89d;
+    border-radius: 15px;
+}
+.updated-tickets-inprogress {
+    border: 2px solid #58aee8;
+    border-radius: 15px;
+}
+.updated-tickets-onhold {
+    border: 2px solid #ee6262;
+    border-radius: 15px;
+}
+.updated-tickets-thursday {
+    position: relative;
+    top: 20px;
+    right: -565px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+.updated-tickets-friday {
+    position: relative;
+    top: 20px;
+    right: -715px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+.updated-tickets-saturday {
+    position: relative;
+    top: 20px;
+    right: -865px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+.updated-tickets-sunday {
+    position: relative;
+    top: 20px;
+    right: -1015px;  
+    height: 80px;
+    width: 100px;
+    cursor: pointer; 
+}
+
+
+.rfc_no {
+    color: gray;
+    font-family: Montserrat;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.navigate {
+    display:flex;
+    position: relative;
+    top: 30px;
+    padding-left: 100px;
+}
+.the-calendar {
+    position: relative;
+    top: 50px;
+    font-family: Montserrat;
+}
+h3 {
+    font-family: Montserrat;
+}
+
+// .reports {
+//     position: relative;
+//     top: 30px;
+//     display: flex;
+//     flex-direction: column;
+//     // justify-content: space-around;
+//     .days-of-the-week {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-around;
+//         .day-x {
+//             font-family: Montserrat;
+//             padding: 5px;
+//         }
+//     }
+    
+//     .card-bg {
+//         background-color: #a7d7f73b;
+//         border: none;
+//     }
+    
+//     .buttons {
+//         display: flex;
+//         flex-direction: row;
+//         justify-content: space-around;
+//         position: relative;
+//         top: 5px;
+//         // left: calc(100%-10px);
+//         .add-button {
+//             // width: 135px;
+//             height: 30px;
+//             text-align: center;
+//             padding: 2px;
+//         }
+//     }
+// }
+
+
+.reports {
+    justify-content: space-around;
+    position: relative;
+    top: 30px;
+    h6 {
+        font-family: Montserrat;
+        text-align: center;
+        font-weight: bold;
+    }
+    .card-bg {
+        // background-color: #a7d7f73b;
+        border: none;
+        width: 150px;
+        .card-container {
+            border-radius: 5px;
+            height: 22px;
+            margin: 5px 0;
+            cursor: pointer;
+            .show_rfc {
+                font-size: 16px;
+                text-align: center;
+                font-family: Montserrat;
+            }
+        }
+        .completed {
+            background: #95b89d;
+            color: white;
+        }
+        .inprogress {
+            background: #dfd770;
+            color: black;
+        }
+        .onhold {
+            background: #ee6262;
+            color: white;
+        }
+        .assigned {
+            background: #e2d9d9;
+            color: black;
+        }
+    }
+    .add-button {
+        position: relative;
+        top: 5px;
+    }
+}
+
+.warn {
+    color: red;
+}
+#dueDate {
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+.chart-container {
+    position: relative;
+    top: 100px;
+    // left: 300px;
+    .chart-title {
+        font-weight: bold;
+    }
+}

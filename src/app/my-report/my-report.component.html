@@ -1,0 +1,333 @@
+<!-- <div class="week-days">
+    <div class="day"><span class="eachday">M</span></div>
+    <div class="day"><span class="eachday">T</span></div>
+    <div class="day"><span class="eachday">W</span></div>
+    <div class="day"><span class="eachday">Th</span></div>
+    <div class="day"><span class="eachday">F</span></div>
+    <div class="day"><span class="eachday">S</span></div>
+    <div class="day"><span class="eachday">Su</span></div>
+</div> -->
+<!-- <div class="item-completed"></div> -->
+<!-- <h1 (childEvent)="message=$event">{{message}}</h1> -->
+<!-- <p>Status is {{passingData.passedData_status}}</p> -->
+<!-- <div *ngIf="day === 'Monday'">
+  <div class="updated-tickets-monday" (click)="onClick()">
+    <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+      <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="day === 'Tuesday'"> -->
+    <!-- <p class="rfc_no">{{passingData.passedData_rfc}}</p> -->
+    <!-- Day is {{day}} -->
+    <!-- <div class="updated-tickets-tuesday" (click)="onClick()">
+      <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+        <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+      </div>
+    </div>
+</div>
+<div *ngIf="day === 'Wednesday'">
+  <div class="updated-tickets-wednesday" (click)="onClick()">
+    <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+      <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="day === 'Thursday'">
+  <div class="updated-tickets-thursday" (click)="onClick()">
+    <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+      <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="day === 'Friday'">
+  <div class="updated-tickets-friday" (click)="onClick()">
+    <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+      <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="day === 'Saturday'">
+  <div class="updated-tickets-saturday" (click)="onClick()">
+    <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+      <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+    </div>
+  </div>
+</div>
+<div *ngIf="day === 'Sunday'">
+  <div class="updated-tickets-sunday" (click)="onClick()">
+    <div [ngClass]="{'updated-tickets-completed': status === 'Completed', 'updated-tickets-inprogress': status === 'In Progress', 'updated-tickets-onhold': status === 'On Hold/Skipped'}">
+      <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="updated-tickets-monday">
+    <p class="rfc_no">{{passingData.passedData_rfc}}</p>
+</div> -->
+
+<!-- <p>Heroes:</p>
+<ul>
+  <li *ngFor="let data of rfc_data">
+     {{ data.rfc }} -->
+    <!-- {{ data.date | date: 'EEEE' }}
+  </li>
+</ul>
+<p>{{day}}</p>  -->
+
+<!-- ******************************************************************************************** -->
+
+<!-- <div class="navigate">
+  <div class="col-md-4">
+    <div class="row text-center">
+    <div class="btn-group">
+      <div class="btn btn-primary" mwlCalendarPreviousView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">Previous</div>
+      <div class="btn btn-outline-secondary" mwlCalendarToday [(viewDate)]="viewDate">Today</div>
+      <div class="btn btn-primary" mwlCalendarNextView [view]="view" [(viewDate)]="viewDate" (viewDateChange)="closeOpenMonthViewDay()">Next</div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4">
+  <h3>{{ viewDate | calendarDate: (view + 'ViewTitle'):'en'}}</h3>
+</div>
+<div class="col-md-4">
+  <div class="btn-group">
+    <div class="btn btn-primary" (click)="setView(CalendarView.Month)" [class.active]="view === CalendarView.Month">Month</div>
+    <div class="btn btn-primary" (click)="setView(CalendarView.Week)" [class.active]="view === CalendarView.Week">Week</div>
+    <div class="btn btn-primary" (click)="setView(CalendarView.Day)" [class.active]="view === CalendarView.Day">Day</div>
+  </div>
+</div>
+</div>
+<br>
+<div [ngSwitch]="view" class="the-calendar">
+  <mwl-calendar-month-view *ngSwitchCase="CalendarView.Month" [viewDate]="viewDate" [events]="events" [refresh]="refresh" [activeDayIsOpen]="activeDayIsOpen" (dayClicked)="dayClicked($event.day)" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"></mwl-calendar-month-view>
+  <mwl-calendar-week-view *ngSwitchCase="CalendarView.Week" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"></mwl-calendar-week-view>
+  <mwl-calendar-day-view *ngSwitchCase="CalendarView.Day" [viewDate]="viewDate" [events]="events" [refresh]="refresh" (eventClicked)="handleEvent('Clicked', $event.event)" (eventTimesChanged)="eventTimesChanged($event)"></mwl-calendar-day-view>
+</div> -->
+
+
+<!-- **********************************************************************************
+               This code is for the containers of weekly tickets
+********************************************************************************** -->
+
+
+<div class="container reports" fxLayout="row">
+  <div class="day-x" fxLayout="column">
+    <h6>Sunday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-sun of containers_sun" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+        <!-- <p class="show_rfc">{{userData[0].rfc}}</p> -->
+      </div>
+      <div class="card-container" *ngFor="let mock-container-sun of mock_containers_sun" [ngClass]="{'completed': mock_status[0] === 'Completed', 'inprogress': mock_status[0] === 'In Progress', 'onhold': mock_status[0] === 'On Hold/Skipped', 'assigned': mock_status[0] === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{userData[0].rfc}}</p>
+      </div>
+
+      <!-- <div class="card-container" *ngFor="let container-sun of containers_sun" [ngClass]="{'completed': mock_status[0] === 'Completed', 'inprogress': mock_status[0] === 'In Progress', 'onhold': mock_status[0] === 'On Hold/Skipped', 'assigned': mock_status[0] === 'Assigned'}" (click)="open_rep(view_details)">
+        <!-- <p class="show_rfc">{{report_rfc}}</p> -->
+        <!-- <p class="show_rfc">{{userData[0].rfc}}</p>
+      </div> --> 
+      
+    </div>
+  
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+  <div class="day-x" fxLayout="column">
+    <h6>Monday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-mon of containers_mon" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+  <div class="day-x" fxLayout="column">
+    <h6>Tuesday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-tue of containers_tue" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+      </div>
+      <div class="card-container" *ngFor="let mock-container-tue of mock_containers_tue" [ngClass]="{'completed': mock_status[1] === 'Completed', 'inprogress': mock_status[1] === 'In Progress', 'onhold': mock_status[1] === 'On Hold/Skipped', 'assigned': mock_status[1] === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{userData[1].rfc}}</p>
+      </div>
+    </div>
+  
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+  <div class="day-x" fxLayout="column">
+    <h6>Wednesday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-wed of containers_wed" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+      </div>
+    </div>
+   
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+  <div class="day-x" fxLayout="column">
+    <h6>Thursday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-thur of containers_thur" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+      </div>
+      <div class="card-container" *ngFor="let mock-container-thur of mock_containers_thur" [ngClass]="{'completed': mock_status[2] === 'Completed', 'inprogress': mock_status[2] === 'In Progress', 'onhold': mock_status[2] === 'On Hold/Skipped', 'assigned': mock_status[2] === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{userData[2].rfc}}</p>
+      </div>
+    </div>
+ 
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+  <div class="day-x" fxLayout="column">
+    <h6>Friday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-fri of containers_fri" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+      </div>
+    </div>
+   
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+  <div class="day-x" fxLayout="column">
+    <h6>Saturday</h6>
+    <div class="card card-bg">
+      <div class="card-container" *ngFor="let container-sat of containers_sat" [ngClass]="{'completed': report_status === 'Completed', 'inprogress': report_status === 'In Progress', 'onhold': report_status === 'On Hold/Skipped', 'assigned': report_status === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{report_rfc}}</p>
+      </div>
+      <div class="card-container" *ngFor="let mock-container-sat of mock_containers_sat" [ngClass]="{'completed': mock_status[3] === 'Completed', 'inprogress': mock_status[3] === 'In Progress', 'onhold': mock_status[3] === 'On Hold/Skipped', 'assigned': mock_status[3] === 'Assigned'}" (click)="open_rep(view_details)">
+        <p class="show_rfc">{{userData[3].rfc}}</p>
+      </div>
+    </div>
+   
+    <button type="button" class="btn btn-outline-info add-button" (click)="open(add_report)">Add Task</button>
+  </div>
+</div>
+
+
+<!-- ********************************************************************************** -->
+<!-- This code is for the pop-up form to add new entry to the report -->
+<!-- ********************************************************************************** -->
+<ng-template #add_report let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title" id="my-modal-header">Add Report</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form #userForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+          <!-- {{userForm.value | json}}
+          <hr>
+          {{newReport | json}} -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="date">Date *</label>
+              <input type="date" name="Date" class="form-control date" placeholder="Select Date" [(ngModel)]="newReport.date" required #Date="ngModel" [class.is-invalid]="Date.invalid && Date.touched">
+              <small [class.d-none]="Date.valid || Date.untouched" class="warn">Date can't be empty</small>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="rfc">JIRA/RFC/SR *</label>
+              <input type="text" name="Rfc" class="form-control rfc" placeholder="Enter RFC/SR/Ticket" [(ngModel)]="newReport.rfc" required #Rfc="ngModel" [class.is-invalid]="Rfc.invalid && Rfc.touched">
+              <small [class.d-none]="Rfc.valid || Rfc.untouched" class="warn">JIRA/RFC/SR can't be empty</small>
+            </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-md-12">
+                  <label for="description">Task Description</label>
+                  <textarea class="form-control description" rows="2" placeholder="Describe the task" name="Description" [(ngModel)]="newReport.description"></textarea>
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="status">Status *</label>
+              <select id="status" class="form-control" [(ngModel)]="newReport.status" name="Status" required #Status="ngModel" [class.is-invalid]="Status.invalid && Status.touched">
+                <option selected></option>
+                <option *ngFor="let mystatus of ticket_status">{{ mystatus }}</option>
+                <!-- <option>Completed</option>
+                <option>In Progress</option> -->
+              </select>
+              <small [class.d-none]="Status.valid || Status.untouched" class="warn">Status can't be empty</small>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="category">Category</label>
+              <select id="category" class="form-control" [(ngModel)]="newReport.category" name="Category">
+                <option selected></option>
+                <option *ngFor="let mycategory of categories">{{ mycategory }}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dueDate">Due Date</label>
+              <input type="date" class="form-control dueDate" placeholder="Due Date" [(ngModel)]="newReport.dueDate" name="Duedate">
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="time">Time required/Time spent</label>
+              <input type="text" class="form-control time" placeholder="4d 8h" [(ngModel)]="newReport.time" name="Time">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="notes">Notes</label>
+              <textarea class="form-control notes" rows="2" [(ngModel)]="newReport.notes" name="Notes"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Add</button>
+              <button class="btn btn-success">Assign</button>
+            </div>
+        </form>
+      </div>
+</ng-template>
+
+<!-- ********************************************************************************** -->
+<!-- This part of the code is to view the detailed report in a modal -->
+<!-- ********************************************************************************** -->
+
+<ng-template #view_details let-d="dismiss">
+  <!-- <div class="modal-dialog"> -->
+    <div class="modal-header">
+      <h4 class="modal-title" id="my-modal-header">{{report_rfc}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <p id="dueDate">{{report_due}}</p>
+      <p>{{report_description}}</p>
+    </div>
+    <div class="modal-footer"></div>
+<!-- </div> -->
+</ng-template>
+
+<!-- ********************************************************************************** -->
+                      <!-- Below is the code for pie-chart -->
+<!-- ********************************************************************************** -->
+
+<div class="container chart-container" fxLayout="row">
+  <div fxLayout="column">
+      <h6 class="chart-title">Visual Representation of the number of tickets</h6>
+      <google-chart #piechart
+        [title]="title"
+        [type]="type"
+        [data]="data"
+        [columnNames]="columnNames"
+        [options]="options"
+        [width]="width"
+        [height]="height">
+      </google-chart>
+  </div>
+
+  <!-- <div fxLayout="column">
+    <h6>Visual Representation of the hours taken</h6>
+    <google-chart #barchart>
+
+    </google-chart>
+  </div> -->
+</div>
