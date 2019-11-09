@@ -6,8 +6,6 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "module": "esnext",
-    "moduleResolution": "node",
     "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -19,8 +17,10 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "resolveJsonModule": true,
-    "esModuleInterop": true
+    ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
